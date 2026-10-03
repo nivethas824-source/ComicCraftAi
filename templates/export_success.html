@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Successful - ComicCraft</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #f4f6f9; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); max-width: 450px; }
+        h1 { color: #28a745; margin-bottom: 15px; font-size: 24px; }
+        p { color: #555555; margin-bottom: 25px; line-height: 1.5; }
+        .action-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .action-btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🎉 Comic Exported Successfully!</h1>
+        <p>Your AI-powered comic has been successfully created and compiled into PDF format!</p>
+        {% if pdf_path %}
+            <a class="action-btn" href="/{{ pdf_path }}" download>Save PDF File Direct</a><br><br>
+        {% endif %}
+        <a class="action-btn" style="background-color: #6c757d;" href="/">Go Create Another Comic</a>
+    </div>
+</body>
+</html>
